@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', serif;
+}
+
+body {
+    background: #1f242d;
+}
+
+#nav-links {
+    color: #fff;
+    text-decoration: none;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+    text-decoration: none;
+    color: #00abf0;
+    transition: .9s;
+}
+
+.navbar ul li a:hover {
+    transition: .9s;
+}
+
+h2 {
+    color: aliceblue;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.paragraph,
+h2 {
+    color: #e8dfdf;
+    text-align: center;
+}
+
+p {
+    color: #e8dfdf;
+}
+
+h4 {
+    color: #e8dfdf;
+    text-align: center;
+}
+
+.paragraph {
+    margin-top: 1rem;
+}
+
+.features-pricing {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+    margin-top: 50px;
+    justify-content: space-between;
+    place-content: center;
+    padding: 0;
+}
+
+.features-pricing .card,
+.features-pricing .card-1 {
+    background: #403838;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 0;
+    transition: .4s;
+}
+
+.features-pricing .card:hover,
+.features-pricing .card-1:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+    border: 2px solid #e8dfdf;
+    transition: .4s;
+}
+
+.features-pricing .card span,
+.features-pricing .card-1 span {
+    font-style: italic;
+    color: #00abf0;
+}
+
+.card>p {
+    padding: 1em;
+}
+
+.card h4:not(span){
+    text-decoration: underline;
+}
+
+.card h4 span {
+    text-decoration: underline #00abf0;
+}
+
+@media (max-width: 768px) {
+    /* 1. Fix the Navbar */
+    .navbar {
+        padding: 15px 5%; /* Less padding on sides */
+        flex-direction: column; /* Stack logo and menu */
+        gap: 15px;
+        position: relative; /* Changing from fixed makes it easier to manage on small screens */
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 0 10px; /* Space links out evenly */
+    }
+
+    .navbar ul li a {
+        font-size: 16px; /* Slightly smaller text */
+    }
+
+}
+
+@media screen and (max-width: 384px) {
+    .logo {
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+}
+
+
+
+

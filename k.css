@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', serif;
+}
+
+body {
+    background: #1f242d;
+}
+
+#nav-links {
+    color: #fff;
+    text-decoration: none;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+    text-decoration: none;
+    color: #7cf03d;
+    transition: .9s;
+}
+
+.navbar ul li a:hover {
+    transition: .9s;
+}
+
+h2 {
+    color: aliceblue;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.home {
+    margin-left: 120px;
+}
+
+h3 {
+    font-size: 35px;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.info span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px #00abf0;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.info span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid #00abf0;
+    color: #00abf0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+img {
+    width: 300px;
+  height: auto;
+  border: none;
+  margin-right: 170px;
+  margin-top: -240px;
+  margin-left: 65%;
+}
+
+button {
+    margin-left: 34px;
+    gap: 15px;
+    margin-top: 20px;
+    background: #00abf0;
+    border: 3px solid #00abf0;
+    box-shadow: 0px 0px 15px #00abf0,
+    0px 0px 15px #00abf0 inset;
+    border-radius: 7px;
+    transition: .5s;
+    width: 100px;
+    height: 25px;
+}
+
+button:hover {
+    background: #e8dfdf;
+    box-shadow: 0px 0px 15px #e8dfdf,
+    0px 0px 15px #e8dfdf inset;
+    border: 3px solid #e8dfdf;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 20px;
+    margin-left: 34px;}
+
+.social-icons i {
+    padding: 4px;
+    transition: .4s;
+}
+
+.social-icons i:hover {
+    background-color: #00abf0;
+    transition: .4s;
+    box-shadow: 0px 0px 15px #00abf0,
+    0px 0px 15px #00abf0 inset;
+}
+
+.social-icons i {
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 2px 2px 2px 2px;
+    box-shadow: 0px 0px 15px #00abf0,
+    0px 0px 15px #00abf0 inset;
+    cursor: pointer;
+    color: #1f242d;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+p {
+    margin-top: 30px;
+    margin-left: 15px;
+    color: #e8dfdf;
+}
+
+.info {
+   color: #e8dfdf;}
+
+h1 {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px #e8dfdf;
+}
+
+.home-buttons button a {
+    text-decoration: none;
+    color: #000;
+}
+
+#kopa {
+    display: flex;
+    text-align: center;
+}
+
+/* --- Add this to the bottom of your CSS file --- */
+
+@media (max-width: 768px) {
+    /* 1. Fix the Navbar */
+    .navbar {
+        padding: 15px 5%; /* Less padding on sides */
+        flex-direction: column; /* Stack logo and menu */
+        gap: 15px;
+        position: relative; /* Changing from fixed makes it easier to manage on small screens */
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 0 10px; /* Space links out evenly */
+    }
+
+    .navbar ul li a {
+        font-size: 16px; /* Slightly smaller text */
+    }
+
+    /* 2. Fix the Home Layout */
+    
+
+    @media screen and (max-width: 768px) {
+        .navbar {
+        padding: 15px 5%; /* Less padding on sides */
+        flex-direction: column; /* Stack logo and menu */
+        gap: 15px;
+        position: relative; /* Changing from fixed makes it easier to manage on small screens */
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 0 10px; /* Space links out evenly */
+    }
+
+    .navbar ul li a {
+        font-size: 16px; /* Slightly smaller text */
+    }
+    .home {
+        margin-left: 0; /* Remove that huge desktop margin */
+        padding: 20px;
+        display: flex;
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center;
+        text-align: center;
+        margin-top: -100px;
+    }
+
+    /* 3. Fix the Image */
+    img {
+        float: none; /* Stop floating to the right */
+        margin: 30px auto 0 auto; /* Center it and add space on top */
+        display: block;
+        width: 200px; /* Slightly smaller for mobile */
+        position: static; /* Reset any positioning */
+        border-radius: 1.5rem;
+    }
+
+    /* 4. Adjust Text & Spacing */
+    h1 {
+        font-size: 2.2rem;
+        -webkit-text-stroke: 1px #e8dfdf; 
+    }
+
+    .info {
+        font-size: 1.5rem;
+    }
+
+    .home-p {
+        margin-left: 0;
+        padding: 0 10px;
+        
+    }
+
+    .home-buttons, .social-icons {
+        margin-left: 0; 
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .home-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 38px;
+    }
+.home img {
+    position: absolute;
+    right: 140px;
+}
+    
+    
+
+
+    body {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;    /* Center horizontally */
+        justify-content: center; /* Center vertically (if body has height) */
+        text-align: center;      /* Centers inline text and images */
+        min-height: 100vh;       /* Ensures body takes full screen height */
+        margin: 0;
+    }
+
+    /* Optional: Ensure child elements take up proper width */
+    body > * {
+        width: 100%;
+        max-width: 400px; /* Prevents elements from stretching too wide on tablets */
+    }
+}
+}
+
+
+
+
+    
+
+@media screen and (max-width: 384px) {
+    .logo {
+          position: absolute;
+          top:20px;
+          left: 50%;
+          right: 50%;
+    }
+
+    .navbar ul {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+@media screen and (max-width: 384px) {
+    .home img {
+    display: block;
+    margin: 2rem auto 0 auto; 
+    max-width: 100%;  
+    height: auto;
+    }
+} 
+    }
